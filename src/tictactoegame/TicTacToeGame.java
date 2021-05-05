@@ -2,7 +2,7 @@ package tictactoegame;
 import java.util.*;
 public class TicTacToeGame {
 	Scanner sc=new Scanner(System.in);
-	char[]board=new char[10];//Array
+	 char[]board=new char[10];//Array
 	public char[] createBoard()   //method Implementation
 	{
 		for(int i=1;i<board.length;i++)
@@ -28,10 +28,20 @@ public class TicTacToeGame {
 		}
 		return player;
 	}
+	public void showBoard() //ShowBoard Method 
+	{
+		System.out.println(board[1]+"|"+board[2]+"|"+board[3]);
+		System.out.println("-+-+-");
+		System.out.println(board[4]+"|"+board[5]+"|"+board[6]);
+		System.out.println("-+-+-");
+		System.out.println(board[7]+"|"+board[8]+"|"+board[9]);
+		
+	}
 	public static void main(String[] args) {
 		TicTacToeGame tictactoe=new TicTacToeGame();//object creation
 		tictactoe.createBoard();//method call
 		tictactoe.playerChoice(); // method call
+		tictactoe.showBoard(); // showBoard Method call
 	}
 
 }
