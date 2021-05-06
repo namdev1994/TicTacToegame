@@ -34,14 +34,53 @@ public class TicTacToeGame {
 		System.out.println("-+-+-");
 		System.out.println(board[4]+"|"+board[5]+"|"+board[6]);
 		System.out.println("-+-+-");
-		System.out.println(board[7]+"|"+board[8]+"|"+board[9]);
-		
+		System.out.println(board[7]+"|"+board[8]+"|"+board[9]);	
 	}
+	public void moveToDesiredLocation() //desired location method
+	{
+		System.out.println("Enter desired location ");
+		int location=sc.nextInt(); //take input from user for desired location
+		switch(location)
+		{
+		case 1:
+			board[1]='x';
+			break;
+		case 2:
+			board[2]='x';
+			break;
+		case 3:
+			board[3]='x';
+			break;
+		case 4:
+			board[4]='x';
+			break;
+		case 5:
+			board[5]='x';
+			break;
+		case 6:
+			board[6]='x';
+			break;
+		case 7:
+			board[7]='x';
+			break;
+		case 8:
+			board[8]='x';
+			break;
+		case 9:
+			board[9]='x';
+			break;
+			default :
+				System.out.println("Enetr valid place");
+		}
+	}
+	
 	public static void main(String[] args) {
 		TicTacToeGame tictactoe=new TicTacToeGame();//object creation
 		tictactoe.createBoard();//method call
 		tictactoe.playerChoice(); // method call
 		tictactoe.showBoard(); // showBoard Method call
+		tictactoe.moveToDesiredLocation(); //desired Location method call
+		
 	}
 
 }
