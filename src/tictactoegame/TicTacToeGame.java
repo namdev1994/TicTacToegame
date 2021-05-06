@@ -164,6 +164,18 @@ public class TicTacToeGame {
 		}
 		
 	}
+	public void checkToss() //checkToss to who play first
+	{
+	    Random random=new Random();
+	    int checktoss=random.nextInt(2)+1;
+	    if(checktoss==1)
+	    {
+	        System.out.println("User Start First");
+	    }
+	    else{
+	        System.out.println("Computer Start First");
+	    }
+	}
 	
 	public static void main(String[] args) {
 		TicTacToeGame tictactoe=new TicTacToeGame();//object creation
@@ -171,7 +183,8 @@ public class TicTacToeGame {
 		tictactoe.playerChoice(); // method call
 		tictactoe.showBoard(); // showBoard Method call
 		tictactoe.moveToDesiredLocation(); //desired Location method call
-		tictactoe.checkDesiredLocationIsFree(); // method call to check Location is free 
+		tictactoe.checkDesiredLocationIsFree(); // method call to check Location is free
+		tictactoe.checkToss(); //CheckToss Method call
 		
 	}
 
