@@ -2,7 +2,8 @@ package tictactoegame;
 import java.util.*;
 public class TicTacToeGame {
 	Scanner sc=new Scanner(System.in);
-	 char[]board=new char[10];//Array
+	char player,computer;
+	char[]board=new char[10];//Array
 	public char[] createBoard()   //method Implementation
 	{
 		for(int i=1;i<board.length;i++)
@@ -13,7 +14,6 @@ public class TicTacToeGame {
 	}
 	public char playerChoice() //method creation
 	{
-		char player,computer;
 		System.out.println("Enter player choice");
 		player=sc.next().charAt(0); //Accepting letter from plyer	
 		if(player=='x')
@@ -21,7 +21,7 @@ public class TicTacToeGame {
 			player='x';
 			computer='0';
 		}
-		else if(player=='0')
+		else 
 		{
 			player='0';
 			computer='x';
@@ -43,35 +43,36 @@ public class TicTacToeGame {
 		switch(location)
 		{
 		case 1:
-			board[1]='x';
+			board[1]=player;
 			break;
 		case 2:
-			board[2]='x';
+			board[2]=player;
 			break;
 		case 3:
-			board[3]='x';
+			board[3]=player;
 			break;
 		case 4:
-			board[4]='x';
+			board[4]=player;
 			break;
 		case 5:
-			board[5]='x';
+			board[5]=player;
 			break;
 		case 6:
-			board[6]='x';
+			board[6]=player;
 			break;
 		case 7:
-			board[7]='x';
+			board[7]=player;
 			break;
 		case 8:
-			board[8]='x';
+			board[8]=player;
 			break;
 		case 9:
-			board[9]='x';
+			board[9]=player;
 			break;
 			default :
 				System.out.println("Enetr valid place");
 		}
+		showBoard();
 	}
 	
 	public static void main(String[] args) {
